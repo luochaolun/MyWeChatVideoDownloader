@@ -6,7 +6,7 @@
 
 折腾好几天，终于可以了！运行后网络不通、捕获不了的看过来：
 
-进入安装目录，打开powershell，从powershell命令行里运行wechatvideodownloader. exe，就可以了。
+# 进入安装目录，打开powershell，从powershell命令行里运行wechatvideodownloader. exe，就可以了。
 
 > 🔥🔥🔥 V2.x版本支持加密视频的下载，可到 Release 中下载更新。
 
