@@ -1,10 +1,12 @@
 # 微信视频号下载器
 
-修改自https://github.com/lecepin/WeChatVideoDownloader
+# 修改自https://github.com/lecepin/WeChatVideoDownloader
 
-自己实现了“复制视频”、“解密视频”功能，因为ai方面比较菜，都没有提示！
+# 自己实现了“复制视频”、“解密视频”功能，并修改解密下载每次都要选择保存目录的不变之处，改为第一次选择保存目录，之后不用选择保存目录。
 
-折腾好几天，终于可以了！运行后网络不通、捕获不了的看过来：
+因为ai方面比较菜，“复制视频”、“解密视频”点击都没有提示！
+
+# 折腾好几天，终于可以了！运行后网络不通、捕获不了的看过来：
 
 # 进入安装目录，打开powershell，从powershell命令行里运行wechatvideodownloader. exe，就可以了。
 

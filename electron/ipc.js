@@ -6,6 +6,7 @@ import { installCert, checkCertInstalled } from './cert';
 import { downloadFile, decodeFile } from './utils';
 
 let win;
+let saveDir;
 
 export default function initIPC() {
   ipcMain.handle('invoke_初始化信息', async (event, arg) => {
@@ -26,12 +27,19 @@ export default function initIPC() {
   });
 
   ipcMain.handle('invoke_选择下载位置', async (event, arg) => {
+	saveDir = saveDir.replace(/(^s*)|(s*$)/g, "");
+	if (saveDir.length > 0)
+	{
+		return saveDir;
+	}
+
     const result = dialog.showOpenDialogSync({ title: '保存', properties: ['openDirectory'] });
 
     if (!result?.[0]) {
       throw '取消';
     }
 
+	saveDir = result?.[0];
     return result?.[0];
   });
 
@@ -78,4 +86,5 @@ export default function initIPC() {
 
 export function setWin(w) {
   win = w;
+  saveDir = "";
 }
