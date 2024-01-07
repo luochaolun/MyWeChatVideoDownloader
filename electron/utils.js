@@ -1,9 +1,9 @@
-import { get } from 'axios';
-import { app, dialog, shell } from 'electron';
+import {head, get, all, spread} from 'axios';
+import {app, dialog, shell} from 'electron';
 import semver from 'semver';
 import fs from 'fs';
 import {getDecryptionArray} from './decrypt';
-import {Transform } from 'stream';
+import {Transform} from 'stream';
 import path from 'path';
 
 // packageUrl 需要包含 { "version": "1.0.0" } 结构

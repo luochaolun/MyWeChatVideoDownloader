@@ -3,6 +3,7 @@ import { ipcRenderer } from 'electron';
 import prettyBytes from 'pretty-bytes';
 import { uniqBy } from 'lodash';
 import { message } from 'antd';
+import toast from 'react-hot-toast';
 
 export default createMachine(
   {
@@ -229,7 +230,7 @@ export default createMachine(
               url: currentUrl,
               decodeKey,
               description,
-          }).catch(() => {}).finally(() => send('e_关闭'));
+          }).then(() => {toast.success('已复制');}).catch(() => {}).finally(() => send('e_关闭'));
       },
 	  invoke_选择文件位置: (context, event) => send => {
         ipcRenderer
@@ -251,9 +252,11 @@ export default createMachine(
               description,
             })
           .then(({ fullFileName }) => {
+			  toast.success('解密完成');
               send({ type: 'e_解密完成', fullFileName, currentUrl });
           })
           .catch(() => {
+			  toast.error('解密失败');
               send('e_解密失败');
           });
       },

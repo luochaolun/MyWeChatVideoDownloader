@@ -11,8 +11,9 @@ import {
   RedoOutlined,
 } from '@ant-design/icons';
 import fsm from './fsm';
-
 import './App.less';
+import { Toaster } from 'react-hot-toast';
+
 function App() {
   const [state, send] = useMachine(fsm);
   const { captureList, currentUrl, downloadProgress } = state.context;
@@ -29,6 +30,7 @@ function App() {
           >
             清空
           </Button>
+	  <Toaster/>
           <Button
             className="App-inited-github"
             icon={<GithubOutlined />}
