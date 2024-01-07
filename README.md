@@ -27,7 +27,8 @@
 
 
 ### 下载
-修改版请到 https://github.com/luochaolun/MyWeChatVideoDownloader/releases
+修改版(仅windows)请到 https://github.com/luochaolun/MyWeChatVideoDownloader/releases
+
 原版请到 Release 中进行下载：https://github.com/lecepin/WeChatVideoDownloader/releases
 
 ---
